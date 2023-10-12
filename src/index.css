@@ -1,0 +1,192 @@
+/* ============= GLOBAL CSS =============== */
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+} /*16px*/
+
+:root {
+  --backgroundColor: #fffefe;
+  --borderRadius: 0.25rem;
+  --letterSpacing: 1px;
+  --transition: 0.3s ease-in-out all;
+  --max-width: 1120px;
+  --fixed-width: 600px;
+  --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-2: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+body {
+  background: var(--backgroundColor);
+  font-weight: 400;
+  line-height: 1;
+  color: var(--textColor);
+}
+p {
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+h1,
+h2 {
+  margin: 0;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  text-transform: capitalize;
+  letter-spacing: var(--letterSpacing);
+}
+
+h1 {
+  color: #000106;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+}
+
+.text {
+  margin-bottom: 1.5rem;
+  max-width: 40em;
+}
+
+.img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Buttons */
+.btn {
+  cursor: pointer;
+  border-radius: var(--borderRadius);
+  letter-spacing: var(--letterSpacing);
+  padding: 0.375rem 0.75rem;
+  box-shadow: var(--shadow-1);
+  transition: var(--transition);
+  text-transform: capitalize;
+  display: inline-block;
+}
+.btn-hipster {
+  border-color: #e03863;
+  border-style: solid;
+  border-width: 1px;
+  color: #f4f6f1;
+  background: #e03863;
+  font-size: 1rem;
+}
+.btn-hipster:hover {
+  background: #f4f6f1;
+  color: #e03863;
+}
+.btn-block {
+  width: 100%;
+}
+
+/* ============= PROJECT CSS =============== */
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.review {
+  width: 90vw;
+  max-width: var(--fixed-width);
+  background: #f4f6f1;
+  padding: 1.5rem 2rem;
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow-1);
+  transition: var(--transition);
+  text-align: center;
+}
+.review:hover {
+  box-shadow: var(--shadow-2);
+}
+.img-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+.person-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+}
+.quote-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  transform: translateY(25%);
+  background: #6fa94f;
+  color: #000106;
+}
+.img-container::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #6fa94f;
+  position: absolute;
+  top: -0.25rem;
+  right: -0.5rem;
+  border-radius: 50%;
+}
+.author {
+  margin-bottom: 0.5rem;
+  color: #000106;
+}
+.job {
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: #e03863;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.75rem;
+  letter-spacing: var(--letterSpacing);
+}
+.info {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+  color: #2a2d70;
+  font-size: 1.1rem;
+}
+.prev-btn,
+.next-btn {
+  color: #000106;
+  font-size: 1.25rem;
+  background: transparent;
+  border-color: transparent;
+  margin: 0 0.5rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.prev-btn:hover,
+.next-btn:hover {
+  color: #6fa94f;
+}
+.btn-container {
+  margin-bottom: 1rem;
+}
